@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>TestNG:  Login Checks</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Login Checks</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 27 21:09:38 CDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>140 seconds (140264 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.inputUserInValid()'><b>inputUserInValid</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an invalid email/invalid email account 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>4</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickFacebook()'><b>clickFacebook</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Google Login Link exist. 
+Validates that Google Login Request Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>3</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickForgotPW()'><b>clickForgotPW</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Forgot Password Link exist. 
+Validates that Reset Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.emptyFields()'><b>emptyFields</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an empty email and a empty password. Validates the Required fields error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidateEmailAllCaps()'><b>loginValidateEmailAllCaps</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be Valid but in Uppercase 
+Password will be correct 
+Validates the Home - Hudl page loads andValidates the email used to login matches the profile's email. 
+The User is then logged out of the system and the browser closes.</td>
+<td></td>
+<td>6</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidUserLogout()'><b>loginValidUserLogout</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account 
+Validates the Home - Hudl page loads. 
+Click Logout. Note Homepage loads. 
+Click Browser's back button, 
+Validate user is still logged out.</td>
+<td></td>
+<td>8</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidUser()'><b>loginValidUser</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account 
+Validates the Home - Hudl page loads. 
+The User is then logged out of the system. 
+Validate the user is navigated back to the Hudl website.</td>
+<td></td>
+<td>12</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateCreateAcctBtm()'><b>validateCreateAcctBtm</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Create Account exist on the bottom of the Log In page 
+Validates when clicked, user is navigated to the Signup Page. 
+User is then logged out.</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidateEmail()'><b>loginValidateEmail</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be Valid 
+Password will be correct 
+Validates the Home - Hudl page loads andValidates the email used to login matches the profile's email. 
+The User is then logged out of the system and the browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.emptyEmail()'><b>emptyEmail</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an valid email and a valid password. The case of the pw is incorrect. 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>10</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.invalidPasswordValidEmail()'><b>invalidPasswordValidEmail</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an invalid email/valid password 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickGoogle()'><b>clickGoogle</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Facebook Login Link exist. 
+Validates that FB Login Request Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>3</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateAvatarInitials()'><b>validateAvatarInitials</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be Valid 
+Password will be correct 
+Validates the Home - Hudl page loads and 
+Validates the avatar's initials are the first letter of the firstname 
+and the first letter of the lastname from the profile page's fields 
+The User is then logged out of the system and the browser closes.</td>
+<td></td>
+<td>10</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateCreateAcctTop()'><b>validateCreateAcctTop</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Create Account exist on the Top of the Log In page. 
+Validates when clicked, user is navigated to the Signup Page. 
+User is then logged out.</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginUserEmailAllCaps()'><b>loginUserEmailAllCaps</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be UPPPERCASE 
+Password will be correct 
+Validates the Home - Hudl page loads regardless of the email's case. 
+The User is then logged out of the system.</td>
+<td></td>
+<td>9</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.invalidEmailFormat()'><b>invalidEmailFormat</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an invalid email format 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>9</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateNoAcctText()'><b>validateNoAcctText</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Login User page loads Dont have an account? text. 
+</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.validPasswordUCValidEmail()'><b>validPasswordUCValidEmail</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an valid email and a valid password. The case of the pw is incorrect. 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickApple()'><b>clickApple</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Apple Login Link exist. 
+Validates that Apple Login Request Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>8</td>
+<td>hudlLoginTestCases.LoginSuccessTests@2a265ea9</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.emptyPassword()'><b>emptyPassword</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an valid email and a missing password. The case of the email is incorrect. 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>4</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.inputUserInValidPW()'><b>inputUserInValidPW</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with a valid email/invalid password 
+Validates the Home - Hudl login page throws an error and useris not logged in. 
+NOTE: Test will navigate back to the https://www.hudl.com page.</td>
+<td></td>
+<td>6</td>
+<td>hudlLoginTestCases.InvalidUserTest@5b1669c0</td></tr>
+</table><p>
+</body>
+</html>

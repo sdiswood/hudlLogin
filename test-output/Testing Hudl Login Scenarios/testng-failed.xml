@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Testing Hudl Login Scenarios]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login Checks(failed)">
+    <classes>
+      <class name="hudlLoginTestCases.InvalidUserTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="validPasswordUCValidEmail"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- hudlLoginTestCases.InvalidUserTest -->
+      <class name="hudlLoginTestCases.AccountSettingsTests">
+        <methods>
+          <include name="setup"/>
+          <include name="afterTest"/>
+          <include name="getLoginPageMouseFocus"/>
+        </methods>
+      </class> <!-- hudlLoginTestCases.AccountSettingsTests -->
+      <class name="hudlLoginTestCases.LoginSuccessTests">
+        <methods>
+          <include name="validateCreateAcctTop"/>
+          <include name="afterTest"/>
+          <include name="emptyFieldsContBtnCheck"/>
+          <include name="loginValidateEmailAllCaps"/>
+          <include name="validateCursorEmailField"/>
+          <include name="clickFacebook"/>
+          <include name="loginValidateEmail"/>
+          <include name="validateAvatarInitials"/>
+          <include name="clickForgotPW"/>
+          <include name="loginValidUserLogout"/>
+          <include name="contBtnNotEnabledEmail"/>
+          <include name="loginValidUserReturnKey"/>
+          <include name="validateNoAcctText"/>
+          <include name="setup"/>
+          <include name="validateCreateAcctBtm"/>
+          <include name="submitBtnNotEnabledPW"/>
+          <include name="clickApple"/>
+          <include name="loginValidUserEnterKey"/>
+        </methods>
+      </class> <!-- hudlLoginTestCases.LoginSuccessTests -->
+    </classes>
+  </test> <!-- Login Checks(failed) -->
+</suite> <!-- Failed suite [Testing Hudl Login Scenarios] -->

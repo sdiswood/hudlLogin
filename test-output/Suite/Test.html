@@ -1,0 +1,719 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jul 28 16:24:36 CDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>189 seconds (189208 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.contBtnNotEnabledEmail()'><b>contBtnNotEnabledEmail</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Inputs valid email, leave Password blank 
+Validate the Continue button is not enabled. 
+FALSE should be returned, so test will fail until addressed. 
+NOTE: I'm not sure if this is a requirement, but the Continue 
+button should not be clickable until all required fields are 
+filled out.</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+	at hudlLoginTestCases.LoginSuccessTests.contBtnNotEnabledEmail(LoginSuccessTests.java:179)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1716421772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1716421772'><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:230)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:240)
+	at hudlLoginTestCases.LoginSuccessTests.contBtnNotEnabledEmail(LoginSuccessTests.java:179)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.emptyFieldsContBtnCheck()'><b>emptyFieldsContBtnCheck</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Inputs empty email, empty Password  
+Validate the Continue button is not enabled. 
+FALSE should be returned, so test will fail until addressed. 
+NOTE: I'm not sure if this is a requirement, but the Continue 
+button should not be clickable until all required fields are 
+filled out.</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+	at hudlLoginTestCases.LoginSuccessTests.emptyFieldsContBtnCheck(LoginSuccessTests.java:159)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace487964833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace487964833'><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:230)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:240)
+	at hudlLoginTestCases.LoginSuccessTests.emptyFieldsContBtnCheck(LoginSuccessTests.java:159)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidUserLogout()'><b>loginValidUserLogout</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account 
+Validates the Home - Hudl page loads. 
+Click Logout. Note Homepage loads. 
+Click Browser's back button, 
+Validate user is still logged out. 
+Currently intermittently clicking back after Logout, still has 
+the user logged in and links are accessible and clickable. 
+</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;https://www.hudl.com/home&gt; but was:&lt;https://www.hudl.com/&gt;
+	at hudlLoginTestCases.LoginSuccessTests.loginValidUserLogout(LoginSuccessTests.java:285)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1527147571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1527147571'><pre>java.lang.AssertionError: expected:&lt;https://www.hudl.com/home&gt; but was:&lt;https://www.hudl.com/&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
+	at hudlLoginTestCases.LoginSuccessTests.loginValidUserLogout(LoginSuccessTests.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.submitBtnNotEnabledPW()'><b>submitBtnNotEnabledPW</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Inputs valid email, leave Password blank 
+Validate the Submit button is not enabled. 
+FALSE should be returned, so test will fail until addressed. 
+NOTE: I'm not sure if this is a requirement, but the submit 
+button should not be clickable until all required fields are 
+filled out.</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+	at hudlLoginTestCases.LoginSuccessTests.submitBtnNotEnabledPW(LoginSuccessTests.java:139)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace721004015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace721004015'><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:230)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:240)
+	at hudlLoginTestCases.LoginSuccessTests.submitBtnNotEnabledPW(LoginSuccessTests.java:139)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.CreateAcctLoginTest.loginFromCreateAcctPage()'><b>loginFromCreateAcctPage</b><br>Test class: hudlLoginTestCases.CreateAcctLoginTest<br>Test method: Click Login --> Hudl (loads User Login Page 
+Click Forgot Password via LoginUserPage 
+Validate navigation to Account Settings Page 
+Click Back to Login Page. 
+Validate the user is then logged in successfully</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Log in&apos;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;stephanies-mbp.lan&apos;, ip: &apos;192.168.86.35&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/2q/91tn8fh90_j...}, goog:chromeOptions: {debuggerAddress: localhost:59009}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46834346b0ab4ada2bfd5251c55bf620
+*** Element info: {Using=xpath, value=//a[normalize-space()=&apos;Log in&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pages.HudlLoginLink.clickLoginBtn(HudlLoginLink.java:42)
+	at hudlLoginTestCases.CreateAcctLoginTest.loginFromCreateAcctPage(CreateAcctLoginTest.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace860567853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace860567853'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Log in&apos;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;stephanies-mbp.lan&apos;, ip: &apos;192.168.86.35&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/2q/91tn8fh90_j...}, goog:chromeOptions: {debuggerAddress: localhost:59009}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46834346b0ab4ada2bfd5251c55bf620
+*** Element info: {Using=xpath, value=//a[normalize-space()=&apos;Log in&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pages.HudlLoginLink.clickLoginBtn(HudlLoginLink.java:42)
+	at hudlLoginTestCases.CreateAcctLoginTest.loginFromCreateAcctPage(CreateAcctLoginTest.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>hudlLoginTestCases.CreateAcctLoginTest@74ea2410</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickFacebook()'><b>clickFacebook</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Google Login Link exist. 
+Validates that Google Login Request Page is loaded when clicked. Browser is then closed</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Google&apos;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;stephanies-mbp.lan&apos;, ip: &apos;192.168.86.35&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/2q/91tn8fh90_j...}, goog:chromeOptions: {debuggerAddress: localhost:57552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52a4fce3a504573e48379f840adb82c0
+*** Element info: {Using=xpath, value=//a[normalize-space()=&apos;Google&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pages.LoginUserPage.validateGooglePage(LoginUserPage.java:206)
+	at hudlLoginTestCases.LoginSuccessTests.clickFacebook(LoginSuccessTests.java:524)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1276761134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1276761134'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Google&apos;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;stephanies-mbp.lan&apos;, ip: &apos;192.168.86.35&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/2q/91tn8fh90_j...}, goog:chromeOptions: {debuggerAddress: localhost:57552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52a4fce3a504573e48379f840adb82c0
+*** Element info: {Using=xpath, value=//a[normalize-space()=&apos;Google&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pages.LoginUserPage.validateGooglePage(LoginUserPage.java:206)
+	at hudlLoginTestCases.LoginSuccessTests.clickFacebook(LoginSuccessTests.java:524)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.AccountSettingsTests.getLoginPageMouseFocus()'><b>getLoginPageMouseFocus</b><br>Test class: hudlLoginTestCases.AccountSettingsTests<br>Test method: Navigates to Log In Page 
+Navigate to Profile link and click Reset Password 
+Get current focus of mouse. 
+If it's a requirement, mouse should auto focus on the 
+email field.</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Log in&apos;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;stephanies-mbp.lan&apos;, ip: &apos;192.168.86.35&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/2q/91tn8fh90_j...}, goog:chromeOptions: {debuggerAddress: localhost:56884}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f6870a6b84223e23a875e3499c85db6
+*** Element info: {Using=xpath, value=//a[normalize-space()=&apos;Log in&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pages.HudlLoginLink.clickLoginBtn(HudlLoginLink.java:42)
+	at hudlLoginTestCases.AccountSettingsTests.getLoginPageMouseFocus(AccountSettingsTests.java:115)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace57151543", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace57151543'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Log in&apos;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;stephanies-mbp.lan&apos;, ip: &apos;192.168.86.35&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/2q/91tn8fh90_j...}, goog:chromeOptions: {debuggerAddress: localhost:56884}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f6870a6b84223e23a875e3499c85db6
+*** Element info: {Using=xpath, value=//a[normalize-space()=&apos;Log in&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pages.HudlLoginLink.clickLoginBtn(HudlLoginLink.java:42)
+	at hudlLoginTestCases.AccountSettingsTests.getLoginPageMouseFocus(AccountSettingsTests.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>hudlLoginTestCases.AccountSettingsTests@7d0b7e3c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='hudlLoginTestCases.CreateAcctLoginTest.loginValidUser()'><b>loginValidUser</b><br>Test class: hudlLoginTestCases.CreateAcctLoginTest<br>Test method: Logs in a user with an existing account 
+Validates the Home - Hudl page loads. 
+The User is then logged out of the system. 
+Validate the user is navigated back to the Hudl website.</td>
+<td></td>
+<td>13</td>
+<td>hudlLoginTestCases.CreateAcctLoginTest@74ea2410</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickGoogle()'><b>clickGoogle</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Facebook Login Link exist. 
+Validates that FB Login Request Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>2</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateCreateAcctTop()'><b>validateCreateAcctTop</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Create Account exist on the Top of the Log In page. 
+Validates when clicked, user is navigated to the Signup Page. 
+User is then logged out.</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.inputUserInValid()'><b>inputUserInValid</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an invalid email/invalid email account 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>4</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.invalidEmailFormat()'><b>invalidEmailFormat</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an invalid email format 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>9</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.invalidPasswordValidEmail()'><b>invalidPasswordValidEmail</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an invalid email/valid password 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.AccountSettingsTests.changePassword()'><b>changePassword</b><br>Test class: hudlLoginTestCases.AccountSettingsTests<br>Test method: Logs in a user with an existing account 
+Navigate to Profile link and click Reset Password 
+Validate Reset Password Label 
+Validate Reset Password Button is enabled and clickable 
+Validate popup that email was sent to change password. 
+</td>
+<td></td>
+<td>14</td>
+<td>hudlLoginTestCases.AccountSettingsTests@7d0b7e3c</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateCreateAcctBtm()'><b>validateCreateAcctBtm</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Create Account exist on the bottom of the Log In page 
+Validates when clicked, user is navigated to the Signup Page. 
+User is then logged out.</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateAvatarInitials()'><b>validateAvatarInitials</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be Valid 
+Password will be correct 
+Validates the Home - Hudl page loads and 
+Validates the avatar's initials are the first letter of the firstname 
+and the first letter of the lastname from the profile page's fields 
+The User is then logged out of the system and the browser closes.</td>
+<td></td>
+<td>6</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidUser()'><b>loginValidUser</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account 
+Validates the Home - Hudl page loads. 
+The User is then logged out of the system. 
+Validate the user is navigated back to the Hudl website.</td>
+<td></td>
+<td>12</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.inputUserInValidPW()'><b>inputUserInValidPW</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with a valid email/invalid password 
+Validates the Home - Hudl login page throws an error and useris not logged in. 
+NOTE: Test will navigate back to the https://www.hudl.com page.</td>
+<td></td>
+<td>4</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickForgotPW()'><b>clickForgotPW</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Forgot Password Link exist. 
+Validates that Reset Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>2</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidateEmailAllCaps()'><b>loginValidateEmailAllCaps</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be Valid but in Uppercase 
+Password will be correct 
+Validates the Home - Hudl page loads andValidates the email used to login matches the profile's email. 
+The User is then logged out of the system and the browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidUserReturnKey()'><b>loginValidUserReturnKey</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs inputs valid email/valid password 
+Clicking RETURN via Keyboard instead of click Submit 
+Validates the Home - Hudl page loads. 
+The User is then logged out of the system. 
+Validate the user is navigated back to the Hudl website.</td>
+<td></td>
+<td>8</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidUserEnterKey()'><b>loginValidUserEnterKey</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs inputs valid email/valid password 
+Clicking Enter via Keyboard instead of click Submit 
+Validates the Home - Hudl page loads. 
+The User is then logged out of the system. 
+Validate the user is navigated back to the Hudl website.</td>
+<td></td>
+<td>8</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.emptyFields()'><b>emptyFields</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an empty email and a empty password. Validates the Required fields error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>8</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.clickApple()'><b>clickApple</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Apple Login Link exist. 
+Validates that Apple Login Request Page is loaded when clicked. Browser is then closed</td>
+<td></td>
+<td>9</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginValidateEmail()'><b>loginValidateEmail</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be Valid 
+Password will be correct 
+Validates the Home - Hudl page loads andValidates the email used to login matches the profile's email. 
+The User is then logged out of the system and the browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.emptyPassword()'><b>emptyPassword</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an valid email and a missing password. The case of the email is incorrect. 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>4</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateNoAcctText()'><b>validateNoAcctText</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Validates the Login User page loads Dont have an account? text. 
+</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.emptyEmail()'><b>emptyEmail</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an valid email and a valid password. The case of the pw is incorrect. 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>10</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.loginUserEmailAllCaps()'><b>loginUserEmailAllCaps</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs in a user with an existing account Email will be UPPPERCASE 
+Password will be correct 
+Validates the Home - Hudl page loads regardless of the email's case. 
+The User is then logged out of the system.</td>
+<td></td>
+<td>9</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+<tr>
+<td title='hudlLoginTestCases.InvalidUserTest.validPasswordUCValidEmail()'><b>validPasswordUCValidEmail</b><br>Test class: hudlLoginTestCases.InvalidUserTest<br>Test method: Logs in a user with an valid email and a valid password. The case of the pw is incorrect. 
+Validates the error message appears and the user is not logged in. 
+NOTE: Test does not logout. Browser closes.</td>
+<td></td>
+<td>7</td>
+<td>hudlLoginTestCases.InvalidUserTest@173ed316</td></tr>
+<tr>
+<td title='hudlLoginTestCases.LoginSuccessTests.validateCursorEmailField()'><b>validateCursorEmailField</b><br>Test class: hudlLoginTestCases.LoginSuccessTests<br>Test method: Logs inputs valid email/valid password 
+Clicking Enter via Keyboard instead of click Submit 
+Validates the Home - Hudl page loads. 
+The User is then logged out of the system. 
+Validate the user is navigated back to the Hudl website.</td>
+<td></td>
+<td>1</td>
+<td>hudlLoginTestCases.LoginSuccessTests@25ce9dc4</td></tr>
+</table><p>
+</body>
+</html>
